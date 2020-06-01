@@ -42,7 +42,7 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="vaishu_resume.html">Resume</a>
+            <a class="nav-link" href="https://docs.google.com/document/d/1NXLEpK6w26BkTpePipKAqH4dtZKEVft7zGPdN6NXUT8/edit?usp=sharing">Resume</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -59,11 +59,11 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="post-heading">
-            <h1>Research_Post</h1>
-            <h2 class="subheading">Problems look mighty small from 150 miles up</h2>
+            <h1>Natural Language Processing Research</h1>
+            <h2 class="subheading">Research Assistant in the Social Computing Lab led by Professor Diesner</h2>
             <span class="meta">Posted by
-              <a href="#">Start Bootstrap</a>
-              on August 24, 2019</span>
+              <a href="about.html">Vaishu Myadam</a>
+            </span>
           </div>
         </div>
       </div>
@@ -75,39 +75,26 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <p>Never in all their history have men been able truly to conceive of the world as one: a single sphere, a globe, having the qualities of a globe, a round earth in which all the directions eventually meet, in which there is no center because every point, or none, is center — an equal earth which all men occupy as equals. The airman's earth, if free men make it, will be truly round: a globe in practice, not in theory.</p>
+          <p>The goal of this research project was to extract impact, meaning the objectives or results of a certain project, from text and analyze how this impact changes over time and in different locations. The text used in this project comes from multiple types of data such as project proposals, midterm reports, annual reports, and final reports of the MacArthur Foundation's global conservation investments. The scanned files given by the Foundation were converted to text files using the Python PyPDF2 library.</p>
 
-          <p>Science cuts two ways, of course; its products can be used for both good and evil. But there's no turning back from science. The early warnings about technological dangers also come from science.</p>
+          <p>This project consisted of four main steps: closed readings, preprocessing, data annotation, and analysis. For closed readings, I read about different Natural Language Processing techniques such as supervised and unsupervised models and about what kind of non-profit work the MacArthur Foundation does. Then, to clean the data, we outlined which non-critical elements had to be removed from data, as shown in the Data Cleaning visual. Using this clean data, I annotated these files and created a Gold Standard to be used in the future when evaluating the success of our model. This annotation involved extracting the impact and critical phrases that indicate final impact and objectives.</p>
 
-          <p>What was most significant about the lunar voyage was not that man set foot on the Moon but that they set eye on the earth.</p>
+          <h2 class="section-heading">The Implementations Involved</h2>
 
-          <p>A Chinese tale tells of some men sent to harm a young girl who, upon seeing her beauty, become her protectors rather than her violators. That's how I felt seeing the Earth for the first time. I could not help but love and cherish her.</p>
+          <p>The final step of analysis currently involves two methods: topic modeling and key words in context. Using Python, I implemented a topic modeling system to extract key information and topics from the files using various Python packages. These packages were also used to visualize the results of the topic model (as shown by the Topic Modeling visual). This model helps us obtain the gist of the files in an efficient manner.</p>
 
-          <p>For those who have seen the Earth from space, and for the hundreds and perhaps thousands more who will, the experience most certainly changes your perspective. The things that we share in our world are far more valuable than those which divide us.</p>
-
-          <h2 class="section-heading">The Final Frontier</h2>
-
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-          <p>There can be no thought of finishing for ‘aiming for the stars.’ Both figuratively and literally, it is a task to occupy the generations. And no matter how much progress one makes, there is always the thrill of just beginning.</p>
-
-          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
-
-          <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
-
-          <h2 class="section-heading">Reaching for the Stars</h2>
-
-          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+          <p>Further, I developed key words in context model that utilizes the key phrases identified by annotation to extract the impact from the text files. The output of this model will be compared to the Gold Standard to measure the accuracy of the model. Using these extracted keywords, we will be able to compare the objectives and impacts discussed in the projects to analyze how impact changed or shifted throughout time and locations. This model helps us pinpoint objectives and impacts in specific ways.</p>
 
           <a href="#">
             <img class="img-fluid" src="img/research_poster.jpg" alt="">
           </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <span class="caption text-muted">Presented at the Undergraduate Research Symposium</span>
 
-          <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+          <h2 class="section-heading">Future Expectations</h2>
 
-          <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
-        </div>
+          <p>The findings of both of these models will help the funders and sponsors of the MacArthur Foundation  gain a more detailed and comprehensive understanding of the objectives and impacts of the projects, see how their investment has been used, and what has been implemented. During this process, I learned about the vast applicability of Natural Language Processing, the usefulness of Python packages, and the steps involved in a successful research project. In the future, these models can be enhanced to view the correlation between impact and amount of money granted, comparisons across more regions, and for analysis of text for various projects.</p>
+
+          </div>
       </div>
     </div>
   </article>
