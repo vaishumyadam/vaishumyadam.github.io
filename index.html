@@ -2,121 +2,2550 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <link rel="stylesheet" href="style.css">
 
-  <title>Vaishnavi Myadam (Vaishu)</title>
+  <title>Vaishu Myadam</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-  <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
-
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Vaishu Myadam</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+
+  <nav class="nav" id="nav">
+
+    <a class="nav-brand" href="#top">
+      Vaishu Myadam
+    </a>
+
+    <div class="nav-links">
+
+      <button class="nav-link" data-scroll="#top">
+        Me
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
+
+      <button class="nav-link" data-scroll="#timeline">
+        Timeline
+      </button>
+
+      <button class="nav-link" data-scroll="#duality">
+        Now
+      </button>
+
+      <button class="nav-link" data-scroll="#personal">
+        Personal
+      </button>
+
+      <button class="nav-link" data-scroll="#game">
+        Play
+      </button>
+
     </div>
+
   </nav>
 
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Vaishu Myadam</h1>
-            <span class="subheading"><a href="index.html">Posts</a> - <a href="about.html">About</a> - <a href="contact.html">Contact</a></span>
-          </div>
+
+  <!-- ============================================================
+       GLOBE TOOLTIP
+  ============================================================ -->
+
+  <div class="globe-tooltip" id="globeTooltip">
+
+    <div class="tooltip-type" id="tooltipType"></div>
+
+    <div class="tooltip-title" id="tooltipTitle"></div>
+
+    <div class="tooltip-copy" id="tooltipCopy"></div>
+
+  </div>
+
+
+  <!-- ============================================================
+       HERO / GLOBE
+  ============================================================ -->
+
+  <section class="hero" id="top">
+
+
+
+
+    <div class="hero-content">
+
+      <div class="hero-copy">
+
+        <h1 class="hero-title">
+          Hi, I'm<br>
+          <em>Vaishu.</em>
+        </h1>
+
+        <p class="hero-subtitle">
+          MBA + AI candidate at Kellogg School of Management, a
+          software engineer turned product-and-strategy person, and
+          someone who spends her life between categories.
+        </p>
+
+        <div class="hero-actions">
+
+          <button class="pill" data-scroll="#timeline" type="button">
+            Start with me ↓
+          </button>
+          <a class="pill" href="./attachments/Vaishnavi%20%28Vaishu%29%20Myadam%20Resume.pdf"
+            download="Vaishnavi (Vaishu) Myadam Resume.pdf">
+            Download Resume ↓
+          </a>
+          <button class="pill" data-scroll="#game" type="button">
+            Try to guess me ↓
+          </button>
+
         </div>
+
+      </div>
+      <div class="portrait-wrap reveal">
+
+        <img class="portrait" src="attachments/Vaishu_Image.jpg" alt="Vaishu Myadam" />
+
       </div>
     </div>
-  </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-          <a href="research_post.html">
-            <h2 class="post-title">
-              Natural Language Processing Research
-            </h2>
-            <h3 class="post-subtitle">
-              School of Information Sciences, UIUC
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="about.html">Vaishu Myadam</a></p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="PCA_NNET_breast_cancer_classification copy.pdf">
-            <h2 class="post-title">
-              Breast Cancer Diagnosis Classification using PCA NNET
-            </h2>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="about.html">Vaishu Myadam</a></p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="covid_report.pdf">
-            <h2 class="post-title">
-              An Exploration of Kaggle’s Covid-19 Dataset using R
-            </h2>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="about.html">Vaishu Myadam</a></p>
-        </div>
-        <hr>
+  </section>
 
-        <hr>
+  <!-- ============================================================
+       PLACES / INTERACTIVE MAP
+  ============================================================ -->
+
+  <section class="places-section" id="timeline">
+
+    <div class="places-intro">
+
+      <h1 class="places-title">
+        Many places.<br>
+        <em>One me.</em>
+      </h1>
+
+      <p class="places-description">
+        Six places. Six chapters. Click through the timeline
+        to see what each one means to me.
+      </p>
+
+    </div>
+
+
+    <div class="places-timeline">
+
+
+      <!-- ======================================================
+           01 — HYDERABAD
+      ======================================================= -->
+
+      <article class="place-card">
+
+        <input type="radio" name="place" id="place-hyderabad" checked>
+
+        <label class="place-marker" for="place-hyderabad">
+
+          <span class="place-number">
+            01
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-hyderabad">
+
+          <div class="place-meta">
+
+            <span>
+              Born
+            </span>
+
+            <span>
+              India
+            </span>
+
+          </div>
+
+
+          <h2>
+            Hyderabad
+          </h2>
+
+
+          <p class="place-short">
+            Where the story starts.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              Born and raised in Hyderabad until
+              first grade. This is where my story starts.
+            </p>
+
+            <div class="place-coordinates">
+              17.385° N · 78.4867° E
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+      <!-- ======================================================
+           02 — BEIJING
+      ======================================================= -->
+
+      <article class="place-card">
+
+        <input type="radio" name="place" id="place-beijing">
+
+        <label class="place-marker" for="place-beijing">
+
+          <span class="place-number">
+            02
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-beijing">
+
+          <div class="place-meta">
+
+            <span>
+              Childhood
+            </span>
+
+            <span>
+              China
+            </span>
+
+          </div>
+
+
+          <h2>
+            Beijing
+          </h2>
+
+
+          <p class="place-short">
+            Some of my earliest memories.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              I grew up here through fourth grade.
+              Some of my strongest childhood memories
+              are from Beijing.
+            </p>
+
+            <div class="place-coordinates">
+              39.9042° N · 116.4074° E
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+      <!-- ======================================================
+           03 — CHICAGO SUBURBS
+      ======================================================= -->
+
+      <article class="place-card">
+
+        <input type="radio" name="place" id="place-suburbs">
+
+        <label class="place-marker" for="place-suburbs">
+
+          <span class="place-number">
+            03
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-suburbs">
+
+          <div class="place-meta">
+
+            <span>
+              Growing Up
+            </span>
+
+            <span>
+              Illinois
+            </span>
+
+          </div>
+
+
+          <h2>
+            Chicago Suburbs
+          </h2>
+
+
+          <p class="place-short">
+            Where I grew up.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              At the end of fourth grade, I moved to
+              the United States and grew up in
+              suburban Chicago.
+            </p>
+
+            <div class="place-coordinates">
+              41.880° N · 87.900° W
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+      <!-- ======================================================
+           04 — UIUC
+      ======================================================= -->
+
+      <article class="place-card">
+
+        <input type="radio" name="place" id="place-uiuc">
+
+        <label class="place-marker" for="place-uiuc">
+
+          <span class="place-number">
+            04
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-uiuc">
+
+          <div class="place-meta">
+
+            <span>
+              Education
+            </span>
+
+            <span>
+              Champaign, IL
+            </span>
+
+          </div>
+
+
+          <h2>
+            UIUC
+          </h2>
+
+
+          <p class="place-short">
+            Statistics × Computer Science.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              I studied Statistics + Computer Science
+              with a Mathematics minor. Research,
+              teaching, mentoring, student leadership,
+              and a 4.0 GPA all happened here.
+            </p>
+
+            <div class="place-coordinates">
+              40.102° N · 88.227° W
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+      <!-- ======================================================
+           05 — CHICAGO
+      ======================================================= -->
+
+      <article class="place-card">
+
+        <input type="radio" name="place" id="place-chicago">
+
+        <label class="place-marker" for="place-chicago">
+
+          <span class="place-number">
+            05
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-chicago">
+
+          <div class="place-meta">
+
+            <span>
+              Career
+            </span>
+
+            <span>
+              Illinois
+            </span>
+
+          </div>
+
+
+          <h2>
+            Chicago
+          </h2>
+
+
+          <p class="place-short">
+            Where I learned to think beyond the code.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              This is where my career started taking
+              shape: software engineering first,
+              then technical product management
+              at a quantitative trading firm.
+            </p>
+
+            <div class="place-coordinates">
+              41.8781° N · 87.6298° W
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+      <!-- ======================================================
+           06 — EVANSTON
+      ======================================================= -->
+
+      <article class="place-card place-current">
+
+        <input type="radio" name="place" id="place-evanston">
+
+        <label class="place-marker" for="place-evanston">
+
+          <span class="place-number">
+            06
+          </span>
+
+          <span class="place-dot"></span>
+
+        </label>
+
+
+        <label class="place-content" for="place-evanston">
+
+          <div class="place-meta">
+
+            <span>
+              Now
+            </span>
+
+            <span>
+              Illinois
+            </span>
+
+          </div>
+
+
+          <h2>
+            Evanston
+          </h2>
+
+
+          <p class="place-short">
+            MBA × AI.
+          </p>
+
+
+          <div class="place-detail">
+
+            <p>
+              Right now I'm in Evanston at Northwestern,
+              pursuing an MBA + Artificial Intelligence
+              degree.
+            </p>
+
+            <div class="place-coordinates">
+              42.0451° N · 87.6877° W
+            </div>
+
+          </div>
+
+
+          <span class="place-arrow">
+            ↗
+          </span>
+
+        </label>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       PERSONALITY GAME
+  ============================================================ -->
+
+  <section class="section game-section" id="game">
+
+    <div class="game-intro reveal">
+
+      <div class="game-title">
+        Guess me:
+      </div>
+
+    </div>
+
+
+    <div class="game-box reveal">
+
+      <div class="game-progress" id="gameProgress"></div>
+
+
+      <div id="gamePlay">
+
+        <div class="game-question" id="gameQuestion"></div>
+
+
+        <div class="game-options" id="gameOptions"></div>
 
       </div>
+
+
+      <div class="game-result" id="gameResult">
+
+        <div class="result-eyebrow">
+          YOU HAVE OFFICIALLY MET ME
+        </div>
+
+        <div class="result-title" id="resultTitle">
+          Hmm.
+        </div>
+
+        <div class="result-copy" id="resultCopy"></div>
+
+        <button class="restart" id="restartGame" type="button">
+          Try again
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       DICHOTOMY
+  ============================================================ -->
+
+  <section class="section" id="duality">
+
+    <div class="section-intro reveal">
+
+      <h2 class="section-title">
+          Flip the cards. <br>
+      </h2>
+
+      <p class="section-description">
+        Flip the cards. Not contradictions, just combinations.
+      </p>
+
+    </div>
+
+
+    <div class="dichotomy-grid">
+
+      <div class="flip-card reveal">
+
+        <div class="flip-inner">
+
+          <div class="flip-face flip-front">
+
+            <div class="flip-index">
+              01 / education
+            </div>
+
+            <h3>
+              Statistics<br>
+              × Computer Science
+            </h3>
+
+            <div class="flip-instruction">
+              click to flip ↗
+            </div>
+
+          </div>
+
+
+          <div class="flip-face flip-back">
+
+            <div class="flip-index">
+              the other side
+            </div>
+
+            <h3>
+              Patterns<br>
+              × Systems
+            </h3>
+
+            <p>
+              I like both understanding what the data says
+              and understanding what makes the system behave
+              the way it does.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flip-card reveal">
+
+        <div class="flip-inner">
+
+          <div class="flip-face flip-front">
+
+            <div class="flip-index">
+              02 / career
+            </div>
+
+            <h3>
+              Engineering<br>
+              × Strategy
+            </h3>
+
+            <div class="flip-instruction">
+              click to flip ↗
+            </div>
+
+          </div>
+
+
+          <div class="flip-face flip-back">
+
+            <div class="flip-index">
+              the other side
+            </div>
+
+            <h3>
+              Build<br>
+              × Decide
+            </h3>
+
+            <p>
+              I started by building technology and gradually
+              became more interested in the decisions around
+              what should be built.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flip-card reveal">
+
+        <div class="flip-inner">
+
+          <div class="flip-face flip-front">
+
+            <div class="flip-index">
+              03 / current
+            </div>
+
+            <h3>
+              MBA<br>
+              × AI
+            </h3>
+
+            <div class="flip-instruction">
+              click to flip ↗
+            </div>
+
+          </div>
+
+
+          <div class="flip-face flip-back">
+
+            <div class="flip-index">
+              right now
+            </div>
+
+            <h3>
+              Business<br>
+              × Technology
+            </h3>
+
+            <p>
+              That intersection is literally what I’m studying
+              at Northwestern right now.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="flip-card reveal">
+
+        <div class="flip-inner">
+
+          <div class="flip-face flip-front">
+
+            <div class="flip-index">
+              04 / personal
+            </div>
+
+            <h3>
+              Analytical<br>
+              × Artistic
+            </h3>
+
+            <div class="flip-instruction">
+              click to flip ↗
+            </div>
+
+          </div>
+
+
+          <div class="flip-face flip-back">
+
+            <div class="flip-index">
+              also me
+            </div>
+
+            <h3>
+              Think<br>
+              × Make
+            </h3>
+
+            <p>
+              I can spend hours thinking through a problem,
+              then happily spend an afternoon painting.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       PERSONAL INTERESTS
+  ============================================================ -->
+
+  <section class="section" id="personal">
+
+    <div class="section-intro reveal">
+
+      <h2 class="section-title">
+        The things that<br>
+        don't belong on a résumé.
+      </h2>
+
+    </div>
+
+
+    <div class="interest-grid">
+
+      <article class="interest-tile reveal" data-interest="reading" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          📚
+        </div>
+
+        <h3>
+          Reading
+        </h3>
+
+        <p>
+          Across genres. I like getting absorbed
+          in another person's way of seeing the world.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="painting" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          🎨
+        </div>
+
+        <h3>
+          Painting
+        </h3>
+
+        <p>
+          Something with no KPI, no roadmap,
+          and no reason to optimize it.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="vision" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ✦
+        </div>
+
+        <h3>
+          Vision Boards
+        </h3>
+
+        <p>
+          A suspiciously organized combination of
+          manifestation and project management.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="coffee" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ☕
+        </div>
+
+        <h3>
+          Coffee
+        </h3>
+
+        <p>
+          Especially when accompanied by an excellent
+          local breakfast spot.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+      <article class="interest-tile interest-art-tile reveal" data-interest="art" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ◉
+        </div>
+
+        <h3>
+          Interactive Art
+        </h3>
+
+        <p>
+          Give me an art museum where touching,
+          moving, or participating is part of the experience.
+        </p>
+
+        <span class="tile-hint" style="
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 5px;
+  ">
+          enter the canvas ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="music" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ♪
+        </div>
+
+        <h3>
+          Rap + Hip-Hop
+        </h3>
+
+        <p>
+          A very different kind of pattern recognition.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+      <article class="interest-tile reveal" data-interest="travel" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ✈
+        </div>
+
+        <h3>
+          City Trips
+        </h3>
+
+        <p>
+          Planning the itinerary is half the vacation.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="beach" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ◒
+        </div>
+
+        <h3>
+          Beach > Mountains
+        </h3>
+
+        <p>
+          This one is not particularly existential.
+          It is simply correct.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+
+      <article class="interest-tile reveal" data-interest="tattoo" tabindex="0" role="button">
+
+        <div class="interest-icon">
+          ?
+        </div>
+
+        <h3>
+          Tattoo
+        </h3>
+
+        <p>
+          Currently exists primarily as a future intention.
+          The idea is still being figured out.
+        </p>
+
+        <span class="tile-hint">
+          click me ↗
+        </span>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================
+       INTERACTIVE ART OVERLAY
+  ============================================================ -->
+
+  <div class="art-overlay" id="artOverlay" aria-hidden="true">
+
+    <canvas id="artCanvas" class="art-canvas"></canvas>
+
+    <div class="art-overlay-content">
+
+      <div class="art-overlay-top">
+
+        <div>
+
+          <div class="kicker">
+            interactive art / 01
+          </div>
+
+          <h2>
+            Move through<br>
+            the colors.
+          </h2>
+
+        </div>
+
+
+        <button class="art-close" id="artClose" aria-label="Close interactive art" type="button">
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="art-overlay-bottom">
+
+        <span>
+          Move your cursor · click to create a new burst
+        </span>
+
+        <button class="art-reset" id="artReset" type="button">
+          Reset canvas
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       INTEREST DETAIL POPUP
+  ============================================================ -->
+
+  <div class="interest-overlay" id="interestOverlay" aria-hidden="true">
+
+    <div class="interest-modal">
+
+      <button class="interest-close" id="interestClose" aria-label="Close" type="button">
+        ×
+      </button>
+
+      <div class="kicker" id="interestModalKicker">
+        a little more
+      </div>
+
+      <div class="interest-modal-icon" id="interestModalIcon"></div>
+
+      <h3 id="interestModalTitle"></h3>
+
+      <p id="interestModalCopy"></p>
+
+      <div class="interest-modal-note" id="interestModalNote"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       EASTER EGG TRIGGER
+  ============================================================ -->
+
+  <button class="egg-trigger" id="eggTrigger" aria-label="Open secret" type="button">
+    ✦
+  </button>
+
+  <div class="egg-overlay" id="eggOverlay">
+    <div class="egg-box">
+
+      <div class="kicker">
+        You found something
+      </div>
+
+      <div class="quote">
+        <div class="quote-mark">“</div>
+
+        <div class="quote-text">
+          The unexamined life is not worth living.
+        </div>
+      </div>
+
+      <p>
+        This comes from the ancient Greek philosopher <strong>Socrates</strong>,
+        as described in Plato’s <em>Apology</em>. He said it during his trial in
+        Athens around <strong>399 BCE</strong>, while defending himself against
+        accusations of corrupting the youth and not respecting the city’s gods.
+      </p>
+
+      <p>
+        This quote means a lot to me because I believe in questioning my beliefs,
+        understanding my values, and seeking wisdom rather than simply accepting
+        things as they are. It reminds me that
+        <strong>self-reflection</strong> and the <strong>search for truth</strong> are essential to living a meaningful
+        life.
+      </p>
+
+      <button class="egg-close" id="eggClose" type="button">
+        Continue exploring
+      </button>
+
     </div>
   </div>
 
-  <hr>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+
+  <footer>
+
+    <div>
+
+      <div class="footer-big">
+        <br>
+        More than<br>
+        <span>one thing,</span>
+        always.<br>
+        <br>
+
+      </div>
+
+    </div>
 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div class="footer-bottom">
 
-  <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+      <span>
+        2026
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+
+  <script>
+
+    /* ============================================================
+       NAVIGATION
+    ============================================================ */
+
+    document
+      .querySelectorAll("[data-scroll]")
+      .forEach(button => {
+
+        button.addEventListener("click", () => {
+
+          const target = document.querySelector(
+            button.dataset.scroll
+          );
+
+          if (target) {
+
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+          }
+
+        });
+
+      });
+
+    /* ============================================================
+       SCROLL REVEALS
+    ============================================================ */
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("in");
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(element => {
+
+        revealObserver.observe(element);
+
+      });
+
+
+    /* ============================================================
+       PERSONALITY GAME
+    ============================================================ */
+
+    const gameQuestions = [
+
+      {
+        question:
+          "A free Saturday appears. What happens?",
+
+        options: [
+          {
+            text: "Plan the entire day.",
+            value: "planner"
+          },
+          {
+            text: "See where the day goes.",
+            value: "wanderer"
+          }
+        ]
+      },
+
+      {
+        question:
+          "You have one afternoon in a new city.",
+
+        options: [
+          {
+            text: "Find the best breakfast spot.",
+            value: "city"
+          },
+          {
+            text: "Go find the weirdest museum.",
+            value: "art"
+          }
+        ]
+      },
+
+      {
+        question:
+          "Your brain won't stop thinking about something.",
+
+        options: [
+          {
+            text: "Analyze it from every angle.",
+            value: "analytical"
+          },
+          {
+            text: "Make something about it.",
+            value: "creative"
+          }
+        ]
+      },
+      {
+        question:
+          "A problem is genuinely complicated.",
+
+        options: [
+          {
+            text: "Understand the system first.",
+            value: "systems"
+          },
+          {
+            text: "Talk it through with someone.",
+            value: "people"
+          }
+        ]
+      },
+
+      {
+        question:
+          "Pick your unnecessary-but-important hobby.",
+
+        options: [
+          {
+            text: "Making a vision board.",
+            value: "vision"
+          },
+          {
+            text: "Planning an itinerary.",
+            value: "planning"
+          }
+        ]
+      }
+
+    ];
+
+
+    let gameIndex = 0;
+
+    const answers = [];
+
+    const gameQuestion =
+      document.getElementById("gameQuestion");
+
+    const gameOptions =
+      document.getElementById("gameOptions");
+
+    const gameProgress =
+      document.getElementById("gameProgress");
+
+    const gamePlay =
+      document.getElementById("gamePlay");
+
+    const gameResult =
+      document.getElementById("gameResult");
+
+
+    function renderGame() {
+
+      gameProgress.innerHTML = "";
+
+      gameQuestions.forEach((_, index) => {
+
+        const dot =
+          document.createElement("div");
+
+        dot.className =
+          "progress-dot" +
+          (
+            index <= gameIndex
+              ? " active"
+              : ""
+          );
+
+        gameProgress.appendChild(dot);
+
+      });
+
+
+      const question =
+        gameQuestions[gameIndex];
+
+      gameQuestion.textContent =
+        question.question;
+
+      gameOptions.innerHTML = "";
+
+
+      question.options.forEach(
+        (option, index) => {
+
+          const button =
+            document.createElement("button");
+
+          button.className =
+            "game-option";
+
+          button.type = "button";
+
+          button.innerHTML = `
+            <span class="option-number">
+              0${index + 1}
+            </span>
+
+            <span class="option-text">
+              ${option.text}
+            </span>
+          `;
+
+
+          button.addEventListener(
+            "click",
+            () => {
+
+              answers.push(option.value);
+
+              gameIndex++;
+
+              if (
+                gameIndex >=
+                gameQuestions.length
+              ) {
+
+                finishGame();
+
+              } else {
+
+                renderGame();
+
+              }
+
+            }
+          );
+
+
+          gameOptions.appendChild(button);
+
+        }
+      );
+
+    }
+
+
+    function finishGame() {
+
+      gamePlay.style.display = "none";
+
+      gameResult.classList.add("visible");
+
+
+      const buckets = {
+
+        organizer: [
+          "planner",
+          "planning",
+          "vision"
+        ],
+
+        thinker: [
+          "analytical",
+          "systems"
+        ],
+
+        maker: [
+          "creative",
+          "art"
+        ],
+
+        explorer: [
+          "wanderer",
+          "city",
+          "beach"
+        ],
+
+        connector: [
+          "people"
+        ]
+
+      };
+
+
+      const scores = {};
+
+      Object.keys(buckets).forEach(key => {
+
+        scores[key] =
+          answers.filter(
+            answer =>
+              buckets[key].includes(answer)
+          ).length;
+
+      });
+
+
+      const winner =
+        Object.keys(scores).reduce(
+          (a, b) =>
+            scores[b] > scores[a]
+              ? b
+              : a
+        );
+
+
+      const outcomes = {
+
+        thinker: {
+          title: "You got the thinker.",
+          copy:
+            "Not surprising. A large part of my personality is asking 'but why' and then continuing to ask it after everyone else has moved on."
+        },
+
+        organizer: {
+          title: "You got the organizer.",
+          copy:
+            "You noticed something real. Vacations, ideas, projects, thoughts: if it can become a system, I will probably make it one."
+        },
+
+        maker: {
+          title: "You got the maker.",
+          copy:
+            "You picked the side of me that doesn't fit on a résumé: painting, writing, and making something simply because it feels interesting."
+        },
+
+        explorer: {
+          title: "You got the explorer.",
+          copy:
+            "You caught the part of me that would rather wander a new neighborhood or sit on a beach than plan every minute of it."
+        },
+
+        connector: {
+          title: "You got the connector.",
+          copy:
+            "You noticed I'd rather talk a hard problem through with someone than untangle it alone."
+        }
+
+      };
+
+
+      document.getElementById(
+        "resultTitle"
+      ).textContent =
+        outcomes[winner].title;
+
+
+      document.getElementById(
+        "resultCopy"
+      ).textContent =
+        outcomes[winner].copy;
+
+    }
+
+
+    document
+      .getElementById("restartGame")
+      .addEventListener(
+        "click",
+        () => {
+
+          gameIndex = 0;
+
+          answers.length = 0;
+
+          gamePlay.style.display = "block";
+
+          gameResult.classList.remove(
+            "visible"
+          );
+
+          renderGame();
+
+        }
+      );
+
+
+    renderGame();
+
+
+    /* ============================================================
+       FLIP CARDS
+    ============================================================ */
+
+    document
+      .querySelectorAll(".flip-card")
+      .forEach(card => {
+
+        card.addEventListener(
+          "click",
+          () => {
+
+            card.classList.toggle("flipped");
+
+          }
+        );
+
+      });
+
+
+    /* ============================================================
+       INTEREST TILE POPUPS
+    ============================================================ */
+
+    const interestData = {
+
+      reading: {
+        icon: "📚",
+        title: "Reading",
+        copy:
+          "I like books that completely pull me into someone else's way of seeing the world. The genre matters less than whether I forget to check my phone.",
+        note:
+          "Current rule: one more chapter is always reasonable."
+      },
+
+      painting: {
+        icon: "🎨",
+        title: "Painting",
+        copy:
+          "Painting is one of the few things I do without trying to optimize the outcome. There is something very nice about making something just because I want to.",
+        note:
+          "No KPI. No roadmap. Just paint."
+      },
+
+      vision: {
+        icon: "✦",
+        title: "Vision Boards",
+        copy:
+          "Equal parts manifestation and project management. I like turning vague ideas about the future into something I can actually look at.",
+        note:
+          "Yes, the folders are organized too."
+      },
+
+      coffee: {
+        icon: "☕",
+        title: "Coffee",
+        copy:
+          "Coffee becomes substantially better when it comes with a good neighborhood, a great breakfast spot, and somewhere I can sit and think.",
+        note:
+          "Bonus points for a new city."
+      },
+
+      music: {
+        icon: "♪",
+        title: "Rap + Hip-Hop",
+        copy:
+          "A completely different form of pattern recognition. I love the rhythm, wordplay, production, and sheer personality of the genre.",
+        note:
+          "The soundtrack changes. The obsession doesn't."
+      },
+
+      travel: {
+        icon: "✈",
+        title: "City Trips",
+        copy:
+          "Give me a new city and I will immediately start collecting neighborhoods, restaurants, coffee shops, museums, and walking routes.",
+        note:
+          "Planning the itinerary is half the vacation."
+      },
+
+      beach: {
+        icon: "◒",
+        title: "Beach > Mountains",
+        copy:
+          "There are some debates where I am perfectly willing to be nuanced. This is not one of them.",
+        note:
+          "Beach. Obviously."
+      },
+
+      tattoo: {
+        icon: "?",
+        title: "Tattoo",
+        copy:
+          "The tattoo currently exists somewhere between an idea and a future project. I know I want one. I am still figuring out exactly what deserves to be permanent.",
+        note:
+          "Still in the research phase."
+      }
+
+    };
+
+
+    const interestOverlay =
+      document.getElementById("interestOverlay");
+
+    const interestModalIcon =
+      document.getElementById("interestModalIcon");
+
+    const interestModalTitle =
+      document.getElementById("interestModalTitle");
+
+    const interestModalCopy =
+      document.getElementById("interestModalCopy");
+
+    const interestModalNote =
+      document.getElementById("interestModalNote");
+
+    const interestClose =
+      document.getElementById("interestClose");
+
+
+    function openInterest(key) {
+
+      const data = interestData[key];
+
+      if (!data) {
+        return;
+      }
+
+      interestModalIcon.textContent =
+        data.icon;
+
+      interestModalTitle.textContent =
+        data.title;
+
+      interestModalCopy.textContent =
+        data.copy;
+
+      interestModalNote.textContent =
+        data.note;
+
+      interestOverlay.classList.add("visible");
+
+      interestOverlay.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+    }
+
+
+    function closeInterest() {
+
+      interestOverlay.classList.remove(
+        "visible"
+      );
+
+      interestOverlay.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+    }
+
+
+    document
+      .querySelectorAll("[data-interest]")
+      .forEach(tile => {
+
+        tile.addEventListener(
+          "click",
+          () => {
+
+            const key =
+              tile.dataset.interest;
+
+            if (key === "art") {
+
+              openArt();
+
+            } else {
+
+              openInterest(key);
+
+            }
+
+          }
+        );
+
+
+        tile.addEventListener(
+          "keydown",
+          event => {
+
+            if (
+              event.key === "Enter" ||
+              event.key === " "
+            ) {
+
+              event.preventDefault();
+
+              const key =
+                tile.dataset.interest;
+
+              if (key === "art") {
+
+                openArt();
+
+              } else {
+
+                openInterest(key);
+
+              }
+
+            }
+
+          }
+        );
+
+      });
+
+
+    interestClose.addEventListener(
+      "click",
+      closeInterest
+    );
+
+
+    interestOverlay.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === interestOverlay
+        ) {
+
+          closeInterest();
+
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       INTERACTIVE ART CANVAS
+    ============================================================ */
+
+    const artOverlay =
+      document.getElementById("artOverlay");
+
+    const artCanvas =
+      document.getElementById("artCanvas");
+
+    const artClose =
+      document.getElementById("artClose");
+
+    const artReset =
+      document.getElementById("artReset");
+
+    const artContext =
+      artCanvas.getContext("2d");
+
+
+    let artAnimationId = null;
+
+    let artWidth = 0;
+    let artHeight = 0;
+
+    let artMouseX = 0;
+    let artMouseY = 0;
+
+    let artHasMouse = false;
+
+
+    const artPalette = [
+      [146, 115, 216],
+      [223, 115, 166],
+      [232, 189, 72],
+      [232, 91, 85],
+      [85, 120, 255],
+      [120, 169, 107]
+    ];
+
+
+    let artParticles = [];
+
+
+    function resizeArtCanvas() {
+
+      const pixelRatio =
+        Math.min(
+          window.devicePixelRatio || 1,
+          2
+        );
+
+
+      artWidth =
+        window.innerWidth;
+
+      artHeight =
+        window.innerHeight;
+
+
+      artCanvas.width =
+        artWidth * pixelRatio;
+
+      artCanvas.height =
+        artHeight * pixelRatio;
+
+      artCanvas.style.width =
+        artWidth + "px";
+
+      artCanvas.style.height =
+        artHeight + "px";
+
+
+      artContext.setTransform(
+        pixelRatio,
+        0,
+        0,
+        pixelRatio,
+        0,
+        0
+      );
+
+    }
+
+
+    function createArtParticles() {
+
+      artParticles = [];
+
+      const count =
+        window.innerWidth < 700
+          ? 30
+          : 48;
+
+
+      for (
+        let i = 0;
+        i < count;
+        i++
+      ) {
+
+        const color =
+          artPalette[
+          Math.floor(
+            Math.random() *
+            artPalette.length
+          )
+          ];
+
+
+        artParticles.push({
+
+          x:
+            Math.random() *
+            artWidth,
+
+          y:
+            Math.random() *
+            artHeight,
+
+          baseX:
+            Math.random() *
+            artWidth,
+
+          baseY:
+            Math.random() *
+            artHeight,
+
+          radius:
+            35 +
+            Math.random() *
+            110,
+
+          speed:
+            0.0003 +
+            Math.random() *
+            0.0008,
+
+          phase:
+            Math.random() *
+            Math.PI *
+            2,
+
+          drift:
+            20 +
+            Math.random() *
+            80,
+
+          color
+
+        });
+
+      }
+
+    }
+
+
+    function drawArt(time) {
+
+      artContext.clearRect(
+        0,
+        0,
+        artWidth,
+        artHeight
+      );
+
+
+      artContext.fillStyle =
+        "rgba(8, 8, 12, 0.13)";
+
+      artContext.fillRect(
+        0,
+        0,
+        artWidth,
+        artHeight
+      );
+
+
+      artParticles.forEach(
+        particle => {
+
+          const t =
+            time * particle.speed +
+            particle.phase;
+
+
+          let x =
+            particle.baseX +
+            Math.sin(t * 1.7) *
+            particle.drift +
+            Math.cos(t * 0.8) *
+            35;
+
+
+          let y =
+            particle.baseY +
+            Math.cos(t * 1.3) *
+            particle.drift +
+            Math.sin(t * 0.7) *
+            35;
+
+
+          if (artHasMouse) {
+
+            const dx =
+              artMouseX - x;
+
+            const dy =
+              artMouseY - y;
+
+            const distance =
+              Math.sqrt(
+                dx * dx +
+                dy * dy
+              );
+
+
+            const influence =
+              Math.max(
+                0,
+                1 -
+                distance / 420
+              );
+
+
+            x +=
+              dx *
+              influence *
+              0.28;
+
+            y +=
+              dy *
+              influence *
+              0.28;
+
+          }
+
+
+          const gradient =
+            artContext.createRadialGradient(
+              x,
+              y,
+              0,
+              x,
+              y,
+              particle.radius
+            );
+
+
+          const [
+            r,
+            g,
+            b
+          ] =
+            particle.color;
+
+
+          gradient.addColorStop(
+            0,
+            `rgba(${r}, ${g}, ${b}, .48)`
+          );
+
+          gradient.addColorStop(
+            0.45,
+            `rgba(${r}, ${g}, ${b}, .18)`
+          );
+
+          gradient.addColorStop(
+            1,
+            `rgba(${r}, ${g}, ${b}, 0)`
+          );
+
+
+          artContext.fillStyle =
+            gradient;
+
+
+          artContext.beginPath();
+
+          artContext.arc(
+            x,
+            y,
+            particle.radius,
+            0,
+            Math.PI * 2
+          );
+
+          artContext.fill();
+
+        }
+      );
+
+
+      artAnimationId =
+        requestAnimationFrame(drawArt);
+
+    }
+
+
+    function createArtBurst(x, y) {
+
+      for (
+        let i = 0;
+        i < 12;
+        i++
+      ) {
+
+        const color =
+          artPalette[
+          Math.floor(
+            Math.random() *
+            artPalette.length
+          )
+          ];
+
+
+        artParticles.push({
+
+          x,
+          y,
+
+          baseX: x,
+          baseY: y,
+
+          radius:
+            20 +
+            Math.random() *
+            70,
+
+          speed:
+            0.0005 +
+            Math.random() *
+            0.0012,
+
+          phase:
+            Math.random() *
+            Math.PI *
+            2,
+
+          drift:
+            60 +
+            Math.random() *
+            130,
+
+          color
+
+        });
+
+      }
+
+
+      if (
+        artParticles.length > 75
+      ) {
+
+        artParticles =
+          artParticles.slice(-75);
+
+      }
+
+    }
+
+
+    function openArt() {
+
+      artOverlay.classList.add("visible");
+
+      artOverlay.setAttribute(
+        "aria-hidden",
+        "false"
+      );
+
+
+      resizeArtCanvas();
+
+      createArtParticles();
+
+
+      cancelAnimationFrame(
+        artAnimationId
+      );
+
+
+      artAnimationId =
+        requestAnimationFrame(drawArt);
+
+    }
+
+
+    function closeArt() {
+
+      artOverlay.classList.remove("visible");
+
+      artOverlay.setAttribute(
+        "aria-hidden",
+        "true"
+      );
+
+
+      cancelAnimationFrame(
+        artAnimationId
+      );
+
+      artHasMouse = false;
+
+    }
+
+
+    artCanvas.addEventListener(
+      "mousemove",
+      event => {
+
+        const rect =
+          artCanvas.getBoundingClientRect();
+
+        artMouseX =
+          event.clientX -
+          rect.left;
+
+        artMouseY =
+          event.clientY -
+          rect.top;
+
+        artHasMouse = true;
+
+      }
+    );
+
+
+    artCanvas.addEventListener(
+      "mouseleave",
+      () => {
+
+        artHasMouse = false;
+
+      }
+    );
+
+
+    artCanvas.addEventListener(
+      "click",
+      event => {
+
+        const rect =
+          artCanvas.getBoundingClientRect();
+
+        createArtBurst(
+          event.clientX - rect.left,
+          event.clientY - rect.top
+        );
+
+      }
+    );
+
+
+    artClose.addEventListener(
+      "click",
+      closeArt
+    );
+
+
+    artReset.addEventListener(
+      "click",
+      event => {
+
+        event.stopPropagation();
+
+        createArtParticles();
+
+      }
+    );
+
+
+    window.addEventListener(
+      "resize",
+      () => {
+
+        if (
+          artOverlay.classList.contains("visible")
+        ) {
+
+          resizeArtCanvas();
+
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       EASTER EGG
+    ============================================================ */
+
+    const eggTrigger =
+      document.getElementById("eggTrigger");
+
+    const eggOverlay =
+      document.getElementById("eggOverlay");
+
+    const eggClose =
+      document.getElementById("eggClose");
+
+
+    eggTrigger.addEventListener(
+      "click",
+      () => {
+
+        eggOverlay.classList.add("visible");
+
+      }
+    );
+
+
+    eggClose.addEventListener(
+      "click",
+      () => {
+
+        eggOverlay.classList.remove(
+          "visible"
+        );
+
+      }
+    );
+
+
+    eggOverlay.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === eggOverlay
+        ) {
+
+          eggOverlay.classList.remove(
+            "visible"
+          );
+
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       TOAST HELPER
+    ============================================================ */
+
+    function showToast(message) {
+
+      const toast =
+        document.createElement("div");
+
+      toast.textContent = message;
+
+      toast.style.cssText = `
+        position: fixed;
+        left: 50%;
+        bottom: 40px;
+        transform: translateX(-50%) translateY(10px);
+        z-index: 400;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: var(--black);
+        color: var(--white);
+        font-family: "Courier New", monospace;
+        font-size: 11px;
+        opacity: 0;
+        transition:
+          opacity .35s ease,
+          transform .35s ease;
+        pointer-events: none;
+        max-width: min(360px, calc(100vw - 40px));
+        text-align: center;
+      `;
+
+
+      document.body.appendChild(toast);
+
+
+      requestAnimationFrame(() => {
+
+        toast.style.opacity = "1";
+
+        toast.style.transform =
+          "translateX(-50%) translateY(0)";
+
+      });
+
+
+      setTimeout(() => {
+
+        toast.style.opacity = "0";
+
+        toast.style.transform =
+          "translateX(-50%) translateY(10px)";
+
+
+        setTimeout(
+          () => toast.remove(),
+          400
+        );
+
+      }, 2400);
+
+    }
+
+
+    /* ============================================================
+       SECRET WORDS
+    ============================================================ */
+
+    let secretSequence = [];
+
+    const secretCode = [
+      "v",
+      "a",
+      "i",
+      "s",
+      "h",
+      "u"
+    ];
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        const key =
+          event.key.toLowerCase();
+
+
+        secretSequence.push(key);
+
+
+        if (
+          secretSequence.length >
+          secretCode.length
+        ) {
+
+          secretSequence.shift();
+
+        }
+
+
+        if (
+          secretSequence.join("") ===
+          secretCode.join("")
+        ) {
+
+          document.body.style.transition =
+            "filter .4s ease";
+
+          document.body.style.filter =
+            "hue-rotate(35deg)";
+
+
+          setTimeout(() => {
+
+            document.body.style.filter = "";
+
+          }, 1200);
+
+
+          showToast(
+            "okay, you found the vaishu code."
+          );
+
+
+          secretSequence = [];
+
+        }
+
+      }
+    );
+
+
+    /* ============================================================
+       DEVTOOLS MESSAGE
+    ============================================================ */
+
+    console.log(
+      "%chi, curious person.",
+      "font-size: 16px; font-weight: bold; color: #9273d8;"
+    );
+
+    console.log(
+      "there are a few hidden things on this site. try typing 'vaishu', or clicking around."
+    );
+
+    /* ============================================================
+       ESCAPE CLOSES OVERLAYS
+    ============================================================ */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (event.key !== "Escape") {
+          return;
+        }
+
+
+        closeInterest();
+
+        closeArt();
+
+        eggOverlay.classList.remove(
+          "visible"
+        );
+
+      }
+    );
+
+  </script>
 
 </body>
 
